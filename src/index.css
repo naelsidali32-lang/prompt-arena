@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;600;700;800&family=Outfit:wght@300;400;600;800&family=JetBrains+Mono:wght@400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #001E3C;
+  color: #f0f0f0;
+  font-family: "Outfit", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+:root {
+  --blue: #0033a0;
+  --red: #e5202e;
+  --dark: #001e3c;
+  --navy: #001229;
+  --violet: #7c3aed;
+  --violet-light: #a78bfa;
+  --card: rgba(124, 58, 237, 0.06);
+  --border: rgba(124, 58, 237, 0.15);
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+}
+@keyframes dotBlink {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}
+@keyframes barGrow {
+  from { width: 0%; }
+}
+@keyframes bgShift {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(-3%, 2%) scale(1.05); }
+}
+@keyframes confettiFall {
+  0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(105vh) rotate(720deg); opacity: 0; }
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 28px;
+}
+.mono {
+  font-family: "JetBrains Mono", monospace;
+}
+.title {
+  font-family: "League Spartan", sans-serif;
+}
+.tag {
+  display: inline-block;
+  border-radius: 8px;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-family: "JetBrains Mono", monospace;
+}
+
+button {
+  font-family: "Outfit", sans-serif;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+input:focus, textarea:focus {
+  outline: none;
+  border-color: var(--violet-light) !important;
+}
